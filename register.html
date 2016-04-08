@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background: #f2f2f2;
+    }
+
+    .panel {
+      margin-top: 50px;
+      border-radius: 0px;
+    }
+
+    .btn {
+      border-radius: 0px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="row col-sm-12">
+    <div class="col-sm-2">
+
+    </div>
+    <div class="col-sm-8">
+      <div class="panel panel-success">
+        <div class="panel-heading text-center">
+          <h1>Register</h1>
+        </div>
+        <div class="panel-body">
+          <form action="registerHelper.php" method="post">
+            <div class="row col-sm-12">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="">Firstname</label>
+                  <input type="text" class="form-control input-lg" placeholder="Firstname" name="firstname">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="">Lastname</label>
+                  <input type="text" class="form-control input-lg" placeholder="Lastname" name="lastname">
+                </div>
+              </div>
+            </div>
+            <div class="row col-sm-12">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="">E-mail</label>
+                  <input type="text" class="form-control input-lg" placeholder="Email" name="email">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="">Username</label>
+                  <input type="text" class="form-control input-lg" placeholder="Username" name="username">
+                </div>
+              </div>
+            </div>
+            <div class="row col-sm-12">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="">Password</label>
+                  <input type="password" class="form-control input-lg" placeholder="Password" name="password">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="">Confirm Password</label>
+                  <input type="password" class="form-control input-lg" placeholder="Confirm Password" name="confirmpassword">
+                </div>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <input type="submit" class="btn btn-success btn-lg" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+
+    </div>
+  </div>
+</body>
+</html>
