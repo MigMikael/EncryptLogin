@@ -11,11 +11,8 @@
   $password = $_POST["password"];
 
   $pagenext = "login.html";
-
   $passwordEncrypt = md5($password);
-  // Create connection
   $conn = mysqli_connect($servername, $usernameDB, $passwordDB, $dbname);
-  // Check connection
   if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
   }
@@ -30,6 +27,5 @@
   }
 
   echo "<br><a href='$pagenext'><h1> Login </h1></a>";
-
   mysqli_close($conn);
 ?>
