@@ -9,9 +9,16 @@
   $email = $_POST["email"];
   $username = $_POST["username"];
   $password = $_POST["password"];
+  $algorithm = $_POST["algorithm"];
 
   $pagenext = "login.html";
-  $passwordEncrypt = md5($password);
+
+  if($algorithm == "md5"){
+    $passwordEncrypt = md5($password);
+  }elseif ($algoirthm == "sha1") {
+    $passwordEncrypt = sha1($password);
+  }
+
   $conn = mysqli_connect($servername, $usernameDB, $passwordDB, $dbname);
   if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());

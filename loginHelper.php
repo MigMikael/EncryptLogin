@@ -5,9 +5,16 @@
   $dbname = "issDB";
   $username = $_POST["username"];
   $password = $_POST["password"];
+  $algorithm = $_POST["algorithm"];
+
   $pagenext = "register.html";
 
-  $passwordEncrypt = md5($password);
+  if($algorithm == "md5"){
+    $passwordEncrypt = md5($password);
+  }elseif ($algorithm == "sha1") {
+    $passwordEncrypt = sha1($password);
+  }
+
   $conn = mysqli_connect($servername, $usernameDB, $passwordDB, $dbname);
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
